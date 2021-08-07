@@ -26,9 +26,9 @@ class Data(BaseModel):
 class YOLO_SERVER(object):
 
     def __init__(self, model_name, weight="last"):
-        data_root = "/home/usr/Downloads/Fastapi/yolov4/darknet/data/{}".format(model_name)
+        data_root = "/root/Downloads/Fastapi/yolov4/darknet/data/{}".format(model_name)
         # data_root = "yolov4/darknet/data/{}".format(model_name)
-        weight_root = "/home/usr/Downloads/Fastapi/yolov4/darknet/backup"
+        weight_root = "/root/Downloads/Fastapi/yolov4/darknet/backup"
         self.cfgfile = os.path.join(data_root, model_name + ".cfg")
         self.weightfile = os.path.join(weight_root, "{}_{}.weights".
                                        format(model_name, weight))
