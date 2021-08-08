@@ -23,7 +23,7 @@ import os
 import sys
 
 file_dir=os.path.dirname(__file__)
-sys.path.append('/root/Fastapi/yolov4/')
+sys.path.append('/root/Downloads/YOLO-BIPA/Fastapi/yolov4/')
 from tool.utils import *
 from tool.torch_utils import *
 from tool.darknet2pytorch import Darknet
