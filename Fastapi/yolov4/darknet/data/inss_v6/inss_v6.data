@@ -1,0 +1,5 @@
+classes = 4
+train  = data/inss_v6/train.txt
+valid  = data/inss_v6/test.txt
+names = data/inss_v6/inss_v6.names
+backup = backup/
