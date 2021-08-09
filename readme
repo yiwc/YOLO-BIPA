@@ -1,0 +1,16 @@
+1. git clone -b yolo_remote_server_gs_v2 https://github.com/yiwc/YOLO-BIPA.git
+
+2. cd ~/YOLO-BIPA
+
+3. Open terminal in ~/YOLO-BIPA
+
+4. sudo docker build -t image_name:version (Version can be decided by your own)
+
+5. sudo docker run -p host_ports:docker_ports image_name:version
+
+6. Run BS3_yolo_client.py in your host PC
+
+7. Test Completion
+
+8. Expected Output in terminal:
+[[0.4016037583351135, 0.2875780463218689, 0.5828080177307129, 0.43696072697639465, 0.6661178469657898, 0.6661178469657898, 0.0], [0.4498555064201355, 0.47087225317955017, 0.6143422722816467, 0.6316881775856018, 0.9871318936347961, 0.9871318936347961, 1.0]]

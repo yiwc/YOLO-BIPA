@@ -5,7 +5,7 @@ import cv2
 sys.path.append(os.path.join(os.getcwd(), "yolov4"))
 
 
-from yolov4.mymodel import *
+from src.yolov4.mymodel import *
 from fastapi import FastAPI
 from pydantic import BaseModel
 import uvicorn
