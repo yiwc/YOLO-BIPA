@@ -6,7 +6,8 @@
 
 4. sudo docker build -t image_name:version (Version can be decided by your own)
 
-5. sudo docker run -p host_ports:docker_ports image_name:version
+5. sudo docker run -p your_host_ports:8081 image_name:version_name
+or sudo nvidia-docker run -p host_ports:8081 --gpus all image_name:version_name
 
 6. Run BS3_yolo_client.py in your host PC
 
