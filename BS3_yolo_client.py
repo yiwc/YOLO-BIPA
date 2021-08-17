@@ -43,7 +43,7 @@ class YOLO_CLIENT():
         }
         #print(params)
         #print(type(params))
-        url = 'http://127.0.0.1:8081/yolo/api/'
+        url = 'http://127.0.0.1:8000/yolo/api/'
         html = requests.post(url, json.dumps(params))
         # html = httpx.post(url,data=params)
         #print(html.text)
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     import cv2
 
     # img = cv2.imread("yolov4_1/testbolt4.png")
-    img = cv2.imread(r'predictions.jpg')
+    img = cv2.imread(r'src/predictions.jpg')
     img = cv2.resize(img, (128, 128))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 

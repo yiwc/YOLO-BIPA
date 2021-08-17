@@ -73,7 +73,7 @@ def convert2cpu_long(gpu_matrix):
 
 
 
-def do_detect(model, img, conf_thresh, nms_thresh, use_cuda=1):
+def do_detect(model, img, conf_thresh, nms_thresh, use_cpu=1):
     model.eval()
     t0 = time.time()
 
@@ -85,8 +85,8 @@ def do_detect(model, img, conf_thresh, nms_thresh, use_cuda=1):
         print("unknow image type")
         exit(-1)
 
-    if use_cuda:
-        img = img.cuda()
+    if use_cpu:
+        img = img.cpu()
     img = torch.autograd.Variable(img)
     
     t1 = time.time()

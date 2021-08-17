@@ -49,9 +49,9 @@ class YOLO_SERVER(object):
 
 
         # a little change
-        use_cuda = True
-        if use_cuda:
-            self.m.cuda()
+        use_cpu = True
+        if use_cpu:
+            self.m.cpu()
         # change back if necessary
 
 
@@ -85,7 +85,7 @@ class YOLO_SERVER(object):
         # sized = cv2.cvtColor(sized, cv2.COLOR_BGR2RGB)
         for i in range(2):
             start = time.time()
-            boxes = do_detect(self.m, sized, 0.4, 0.6, use_cuda)
+            boxes = do_detect(self.m, sized, 0.4, 0.6, use_cpu)
 
             finish = time.time()
             if i == 1:

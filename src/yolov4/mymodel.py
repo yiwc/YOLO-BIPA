@@ -30,7 +30,7 @@ from tool.darknet2pytorch import Darknet
 import argparse
 
 """hyper parameters"""
-use_cuda = True
+use_cpu = True
 
 
 

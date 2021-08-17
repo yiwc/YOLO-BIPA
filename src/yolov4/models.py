@@ -473,12 +473,12 @@ if __name__ == "__main__":
 
     model = Yolov4(yolov4conv137weight=None, n_classes=n_classes, inference=True)
 
-    pretrained_dict = torch.load(weightfile, map_location=torch.device('cuda'))
+    pretrained_dict = torch.load(weightfile, map_location=torch.device('cpu'))
     model.load_state_dict(pretrained_dict)
 
-    use_cuda = True
-    if use_cuda:
-        model.cuda()
+    use_cpu = True
+    if use_cpu:
+        model.cpu()
 
     img = cv2.imread(imgfile)
 
@@ -495,7 +495,7 @@ if __name__ == "__main__":
 
     for i in range(2):  # This 'for' loop is for speed check
                         # Because the first iteration is usually longer
-        boxes = do_detect(model, sized, 0.4, 0.6, use_cuda)
+        boxes = do_detect(model, sized, 0.4, 0.6, use_cpu)
 
     if namesfile == None:
         if n_classes == 20:
