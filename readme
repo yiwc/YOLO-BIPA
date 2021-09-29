@@ -15,3 +15,8 @@ or sudo nvidia-docker run -p host_ports:8081 --gpus all image_name:version_name
 
 8. Expected Output in terminal:
 [[0.4016037583351135, 0.2875780463218689, 0.5828080177307129, 0.43696072697639465, 0.6661178469657898, 0.6661178469657898, 0.0], [0.4498555064201355, 0.47087225317955017, 0.6143422722816467, 0.6316881775856018, 0.9871318936347961, 0.9871318936347961, 1.0]]
+
+
+##Update
+How to connect Main docker and Yolo docker:
+in Bs3_yolo_client.py, change the ip of url to be the ip of yolo docker, the port should be the port in BS3_yolo_server.py
